@@ -302,4 +302,12 @@ for(i in random_ind){
 ![](Image_Recognition_Using_R_files/figure-markdown_github/unnamed-chunk-24-1.png) 
 ![](Image_Recognition_Using_R_files/figure-markdown_github/unnamed-chunk-24-2.png) 
 
-Thus we see that we have managed to get around 75% acurracy in classifying dogs and cats
+Thus we see that we have managed to achieve around 75% acurracy in classifying dogs and cats.
+
+Closing Remarks
+======================
+
+1] Choosing to include more images for training might improve the accuracy.
+2] Different CNN architectures and hyperparmeter tuning might give better results.
+3] Other data augmentation techniques can also be implemented.
+4] Transfer learning using pre trained model might increase the accuracy.
