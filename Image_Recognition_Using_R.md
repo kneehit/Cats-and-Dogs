@@ -310,4 +310,4 @@ Closing Remarks
 1] Choosing to include more images for training might improve the accuracy. <br>
 2] Different CNN architectures and hyperparmeter tuning might give better results. <br>
 3] Other data augmentation techniques can also be implemented. <br>
-4] Transfer learning using pre-trained model might increase the accuracy. <br>
+4] Transfer learning using pre-trained model can lead to better accuracy. <br>
