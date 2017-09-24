@@ -1,7 +1,7 @@
 Image Recognition Using R
-================
+===========================
 
-Loading required libraries and the dataset. <br> a 
+Loading required libraries and the dataset. 
 
 ``` r
 library(imager)
@@ -38,7 +38,9 @@ library(imager)
 library(keras)
 ```
 
-The train and test images are stored in . Since the machine I am using does not have a Nvidia GPU, I have decided to only include first 5000 images for train set and 1500 for test set. Out of all the train images,1000 images have been saved seperately for the validation set.
+The train and test images are stored in seperate folders. <br>
+ Since the machine I am using does not have a Nvidia GPU, I have decided to only include first 5000 images for train set and 1500 for test set. <br>
+ Out of all the train images,1000 images have been saved seperately for the validation set.
 
 ``` r
 train_files <- "C:/Users/Nihit/Documents/Dataset - Cats and Dogs/train"
@@ -55,7 +57,7 @@ test_samples = 1500
 Data Preparation
 ================
 
-Lets create image generators to take images from the system instead of loading all at once in R. We will initially only rescale our data between scale of 0 and 1 which will help gradient descent to converge faster.
+Lets create image generators to take images from the system instead of loading all at once in R. <br> We will initially only rescale our data between scale of 0 and 1 which will help gradient descent to converge faster.
 
 ``` r
 train <- image_data_generator(rescale = 1.0/255) 
@@ -63,7 +65,7 @@ validation <- image_data_generator(rescale = 1.0/255)
 test <- image_data_generator(rescale = 1.0/255)
 ```
 
-Lets define new variable for batch size, image width and height
+Lets define new variable for batch size, image width and height.
 
 ``` r
 width <- 150
@@ -71,7 +73,7 @@ height <- 150
 batch_size <- 32
 ```
 
-We will now create an iterator which take files from the directory. We will also pass it the required arguments like target size, color mode,class mode and class mode.
+We will now create an iterator which take files from the directory. We will also pass the required arguments like target size, color mode,class mode and class mode.
 
 ``` r
 train_generator <- flow_images_from_directory(train_files,generator = train,
@@ -117,7 +119,7 @@ As seen from above 0 is assigned to Cat and 1 is assigned to Dog.
 Building CNN Model
 ==================
 
-Our CNN model architure consits of 3 convolution layers and 2 fully connected layers. Convolution layers act as feature extractors. Each convolution layer is followed by a max pooling layer to reduce computation cost. The number of filters is set to 32 for first two conv layers while third one has 64 filters. The filter size is the dimension for which image is scanned at a time and is set 3 x 3. Stride is the amount which the filter of filter size (3x3 here) shifts and is set to 1x1. After convolution and pooling layers we have a flatten layer,a dropout layer to avoid overfitting and 2 dense layers. The last layer has only one neuron to output probabilities.
+Our CNN model architure consits of 3 convolution layers and 2 fully connected layers. <br> Convolution layers act as feature extractors. Each convolution layer is followed by a max pooling layer to reduce computation cost. <br> The number of filters is set to 32 for first two conv layers while third one has 64 filters. The filter size is the dimension for which image is scanned at a time and is set 3 x 3. <br> Stride is the amount which the filter of filter size (3x3 here) shifts and is set to 1x1. <br> After convolution and pooling layers we have a flatten layer,a dropout layer to avoid overfitting and 2 dense layers. The last layer has only one neuron and sigmoid activation function to output probabilities.
 
 ``` r
 model <- keras_model_sequential()
@@ -156,7 +158,7 @@ We will set epochs to 50.
 epochs <- 50
 ```
 
-Lets train the model with above configuration. I will save the model after 3 epochs since at this time the R session crashes during training phase. Additionally the epoch number,training accuracy and validation accuracy will also be saved as a part of filename.
+Lets train the model with the above configuration. I will save the model after 3 epochs since currently the R session crashes during training phase. Additionally the epoch number,training accuracy and validation accuracy will also be saved as a part of filename.
 
 ``` r
 history <- model %>% fit_generator(
@@ -201,8 +203,9 @@ for(i in random_ind){
 ![](Image_Recognition_Using_R_files/figure-markdown_github/unnamed-chunk-15-1.png) 
 
 ![](Image_Recognition_Using_R_files/figure-markdown_github/unnamed-chunk-15-2.png) 
-Our model has successfully classified around 60% of images correctly.
 
+Our model has successfully classified around 60% of images correctly.
+<br>
 Lets try adding few data augmentation techniques to make our model learn better.
 
 Training Model with Data Augmentation
@@ -298,4 +301,5 @@ for(i in random_ind){
 ```
 ![](Image_Recognition_Using_R_files/figure-markdown_github/unnamed-chunk-24-1.png) 
 ![](Image_Recognition_Using_R_files/figure-markdown_github/unnamed-chunk-24-2.png) 
+
 Thus we see that we have managed to get around 75% acurracy in classifying dogs and cats
