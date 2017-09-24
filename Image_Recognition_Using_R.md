@@ -208,6 +208,7 @@ Our model has successfully classified around 60% of images correctly.
 <br>
 Lets try adding few data augmentation techniques to make our model learn better.
 
+![](Epochs for model with augmentation.html)
 Training Model with Data Augmentation
 =====================================
 
