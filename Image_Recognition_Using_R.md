@@ -170,6 +170,8 @@ history <- model %>% fit_generator(
   callbacks = callback_model_checkpoint(filepath = "C:/Users/Nihit/Documents/Dataset - Cats and Dogs/Models/weights.{epoch:02d}-{acc:.2f}-{val_acc:.2f}.hdf5",monitor = "val_acc",period = 3))
 ```
 
+![](Image_Recognition_Using_R_files/figure-markdown_github/Model without Augmentation Epochs.png) 
+
 Model Predictions
 =================
 
@@ -276,6 +278,11 @@ history <- model %>% fit_generator(
   validation_steps = as.integer(validation_samples/batch_size),
   callbacks = callback_model_checkpoint(filepath = "D:/Cats and Dogs/Models/weights.{epoch:02d}-{acc:.2f}-{val_acc:.2f}.hdf5",monitor = "val_acc",period = 3))
 ```
+![](Image_Recognition_Using_R_files/figure-markdown_github/Model with Augmentation Epochs.png)
+
+Model Predictions
+=======================
+
 
 Just like before, lets test our model on actual images now.
 
