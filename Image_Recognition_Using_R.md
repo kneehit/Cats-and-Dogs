@@ -198,7 +198,9 @@ for(i in random_ind){
 }
 }
 ```
+![](Image_Recognition_Using_R_files/figure-markdown_github/unnamed-chunk-15-1.png) 
 
+![](Image_Recognition_Using_R_files/figure-markdown_github/unnamed-chunk-15-2.png) 
 Our model has successfully classified around 60% of images correctly.
 
 Lets try adding few data augmentation techniques to make our model learn better.
@@ -294,5 +296,6 @@ for(i in random_ind){
 }
 #}
 ```
-
+![](Image_Recognition_Using_R_files/figure-markdown_github/unnamed-chunk-24-1.png) 
+![](Image_Recognition_Using_R_files/figure-markdown_github/unnamed-chunk-24-2.png) 
 Thus we see that we have managed to get around 75% acurracy in classifying dogs and cats
