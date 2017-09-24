@@ -278,7 +278,7 @@ history <- model %>% fit_generator(
   validation_steps = as.integer(validation_samples/batch_size),
   callbacks = callback_model_checkpoint(filepath = "D:/Cats and Dogs/Models/weights.{epoch:02d}-{acc:.2f}-{val_acc:.2f}.hdf5",monitor = "val_acc",period = 3))
 ```
-![](Image_Recognition_Using_R_files/figure-markdown_github/Model with Augmentation Epochs.png)
+![](Image_Recognition_Using_R_files/figure-markdown_github/Model-with-Augmentation-Epochs.png)
 
 Model Predictions
 =======================
