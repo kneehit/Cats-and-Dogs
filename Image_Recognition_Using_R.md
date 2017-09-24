@@ -208,7 +208,6 @@ Our model has successfully classified around 60% of images correctly.
 <br>
 Lets try adding few data augmentation techniques to make our model learn better.
 
-![](Epochs for model with augmentation.html)
 Training Model with Data Augmentation
 =====================================
 
@@ -308,7 +307,7 @@ Thus we see that we have managed to achieve around 75% acurracy in classifying d
 Closing Remarks
 ======================
 
-1] Choosing to include more images for training might improve the accuracy.
-2] Different CNN architectures and hyperparmeter tuning might give better results.
-3] Other data augmentation techniques can also be implemented.
-4] Transfer learning using pre trained model might increase the accuracy.
+1] Choosing to include more images for training might improve the accuracy. <br>
+2] Different CNN architectures and hyperparmeter tuning might give better results. <br>
+3] Other data augmentation techniques can also be implemented. <br>
+4] Transfer learning using pre-trained model might increase the accuracy. <br>
