@@ -1,7 +1,7 @@
 Image Recognition Using R
 ================
 
-Loading required libraries and the dataset.
+Loading required libraries and the dataset. <br> a 
 
 ``` r
 library(imager)
