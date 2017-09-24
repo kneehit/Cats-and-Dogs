@@ -170,6 +170,11 @@ history <- model %>% fit_generator(
   callbacks = callback_model_checkpoint(filepath = "C:/Users/Nihit/Documents/Dataset - Cats and Dogs/Models/weights.{epoch:02d}-{acc:.2f}-{val_acc:.2f}.hdf5",monitor = "val_acc",period = 3))
 ```
 
+![](Image_Recognition_Using_R_files/figure-markdown_github/Model-without-Augmentation-Epochs.png)
+
+The accuracy does not increase after initial 10 epochs and thus 50 epochs seem quite unnecessary. <br>
+Lets try predicting using this model.
+
 Model Predictions
 =================
 
@@ -277,6 +282,10 @@ history <- model %>% fit_generator(
   callbacks = callback_model_checkpoint(filepath = "D:/Cats and Dogs/Models/weights.{epoch:02d}-{acc:.2f}-{val_acc:.2f}.hdf5",monitor = "val_acc",period = 3))
 ```
 
+![](Image_Recognition_Using_R_files/figure-markdown_github/Model-without-Augmentation-Epochs.png)
+
+As seen from above the accuracy starts to plateau after few epochs. But nevertheless it does not overfit and we can use this model from classification.
+<br>
 Just like before, lets test our model on actual images now.
 
 ``` r
