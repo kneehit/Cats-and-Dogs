@@ -170,7 +170,7 @@ history <- model %>% fit_generator(
   callbacks = callback_model_checkpoint(filepath = "C:/Users/Nihit/Documents/Dataset - Cats and Dogs/Models/weights.{epoch:02d}-{acc:.2f}-{val_acc:.2f}.hdf5",monitor = "val_acc",period = 3))
 ```
 
-![](Image_Recognition_Using_R_files/figure-markdown_github/unnamed-chunk-15-2.png) 
+![](Image_Recognition_Using_R_files/figure-markdown_github/Model-without-Augmentation-Epochs.png) 
 
 Model Predictions
 =================
