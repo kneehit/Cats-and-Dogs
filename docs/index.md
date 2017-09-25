@@ -24,9 +24,9 @@ val_files <- "C:/Users/Nihit/Documents/Dataset - Cats and Dogs/validation"
 ```
 
 ``` r
-train_samples = 5000
-validation_samples = 1000
-test_samples = 1500
+train_samples <- 5000
+validation_samples <- 1000
+test_samples <- 1500
 ```
 
 Data Preparation
