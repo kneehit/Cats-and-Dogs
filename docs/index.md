@@ -5,36 +5,6 @@ Loading required libraries and the dataset.
 
 ``` r
 library(imager)
-```
-
-    ## Loading required package: plyr
-
-    ## Loading required package: magrittr
-
-    ## 
-    ## Attaching package: 'imager'
-
-    ## The following object is masked from 'package:magrittr':
-    ## 
-    ##     add
-
-    ## The following object is masked from 'package:plyr':
-    ## 
-    ##     liply
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     convolve, spectrum
-
-    ## The following object is masked from 'package:graphics':
-    ## 
-    ##     frame
-
-    ## The following object is masked from 'package:base':
-    ## 
-    ##     save.image
-
-``` r
 library(keras)
 ```
 
