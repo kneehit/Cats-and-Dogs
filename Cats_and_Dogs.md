@@ -1,4 +1,4 @@
-Image Recognition Using R
+Cats and Dogs
 ===========================
 
 Loading required libraries and the dataset. 
